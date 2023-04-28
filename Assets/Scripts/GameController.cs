@@ -1,4 +1,5 @@
 using ChickenRoast.Chicken;
+using ChickenRoast.Data;
 using ChickenRoast.Fire;
 using DG.Tweening;
 using TMPro;
@@ -13,7 +14,7 @@ namespace ChickenRoast
     {
         public ChickenController chickenController;
         public FireController fireController;
-        public Config config;
+        public DataConfig dataConfig;
 
         public GameObject winPanel;
         public GameObject losePanel;
@@ -22,8 +23,8 @@ namespace ChickenRoast
 
         private void Start()
         {
-            fireController.Setup(config.fireData, onFireShutDown: LoseGame);
-            chickenController.Setup(config.chickenData, fireController.GetIntensity,WinGame,LoseGame);
+            fireController.Setup(dataConfig.fireData, onFireShutDown: LoseGame);
+            chickenController.Setup(dataConfig.chickenData, fireController.GetIntensity,WinGame,LoseGame);
             restartButton.onClick.AddListener(RestartGame);
         }
 

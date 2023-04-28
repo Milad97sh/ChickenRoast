@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using ChickenRoast.Data;
 using UnityEngine;
 using Slider = UnityEngine.UI.Slider;
 

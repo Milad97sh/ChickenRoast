@@ -1,4 +1,4 @@
-namespace ChickenRoast
+namespace ChickenRoast.Data
 {
     [System.Serializable]
     public class FireData
