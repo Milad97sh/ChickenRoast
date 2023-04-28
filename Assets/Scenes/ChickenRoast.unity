@@ -2718,7 +2718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chickenController: {fileID: 987145448}
   fireController: {fileID: 987145447}
-  config: {fileID: 11400000, guid: 8398be82276c9da44bce41102aa8ad4e, type: 2}
+  dataConfig: {fileID: 11400000, guid: 8398be82276c9da44bce41102aa8ad4e, type: 2}
   winPanel: {fileID: 917173819}
   losePanel: {fileID: 603134908}
   loseTitle: {fileID: 1999626339}
