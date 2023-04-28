@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Roast Chicken Data
   m_EditorClassIdentifier: 
   fireData:
-    startIntensity: 50
-    maxIntensity: 100
-    intensityIncreaseRate: 5
-    intensityDecreaseTimeRate: 0.2
+    startIntensity: 70
+    maxIntensity: 140
+    intensityIncreaseRate: 13
+    intensityDecreaseTimeRate: 0.05
   chickenData:
     startCookingValue: 200
     startBurnValue: 350
