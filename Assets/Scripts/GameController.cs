@@ -1,6 +1,7 @@
 using ChickenRoast.Chicken;
 using ChickenRoast.Fire;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,8 +15,9 @@ namespace ChickenRoast
         public FireController fireController;
         public Config config;
 
-        public GameObject winTitle;
-        public GameObject loseTitle;
+        public GameObject winPanel;
+        public GameObject losePanel;
+        public TextMeshProUGUI loseTitle;
         public Button restartButton;
 
         private void Start()
@@ -28,13 +30,17 @@ namespace ChickenRoast
         private void LoseGame()
         {
             DisableControllers();
-            loseTitle.transform.DOScale(1,0.5f).SetEase(Ease.OutBounce);
+            LoseHandler loseHandler = new LoseHandler(loseTitle);
+            loseHandler.LoseUpdate();
+            losePanel.transform.DOScale(1,0.5f).SetEase(Ease.OutBounce);
+            restartButton.GetComponent<CanvasGroup>().DOFade(1, 0.5f).SetDelay(2);
         }
 
         private void WinGame()
         {
             DisableControllers();
-            winTitle.transform.DOScale(1,0.5f).SetEase(Ease.OutBounce);
+            winPanel.transform.DOScale(1,0.5f).SetEase(Ease.OutBounce);
+            restartButton.GetComponent<CanvasGroup>().DOFade(1, 0.5f).SetDelay(2);
         }
 
         private void DisableControllers()
